@@ -2,7 +2,7 @@
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
 Set-Location $DownloadsFolder
 Invoke-RestMethod script.sophi.app | Invoke-Expression
-Set-Location Sophia*
+Set-Location $DownloadsFolder\Sophia*
 .\Sophia.ps1
 
 # Setup for Ansible Host
