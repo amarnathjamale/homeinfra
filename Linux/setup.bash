@@ -3,6 +3,7 @@
 # Update dot files
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 
+
 # Update the all packages
 yum update -y
 
