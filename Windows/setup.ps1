@@ -52,8 +52,8 @@ do {
     $selection = Read-Host "Please make a selection"
     switch ($selection) {
         '1' { VSCode }
-        '2' { Hardening }
-        '3' { WSL }
+        '2' { WSL }
+        '3' { Hardening }
         '4' { Apps }
         '5' { ALL }
     }
