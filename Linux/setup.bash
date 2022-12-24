@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update dot files
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 
 # Update the all packages
 yum update -y

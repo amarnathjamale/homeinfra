@@ -5,7 +5,7 @@ function VSCode {
 function WSL {
     wsl --install
     winget install -e --id whitewaterfoundry.fedora-remix-for-wsl
-    wsl -d fedoraremix -u root sh -c "$(curl -fsSL https://raw.githubusercontent.com/amarnathjamale/homeinfra/master/Linux/setup.bash)"
+    wsl -d fedoraremix -u root curl -fsSL https://raw.githubusercontent.com/amarnathjamale/homeinfra/master/Linux/setup.bash | bash
 }
 
 function Hardening {
