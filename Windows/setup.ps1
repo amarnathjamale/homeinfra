@@ -21,11 +21,22 @@ function Apps {
     choco install mpv -y
 }
 
+function Spotify {
+    #Installs Spotify and patches it for adblock
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex "& { $((iwr -useb 'https://raw.githubusercontent.com/SpotX-CLI/SpotX-Win/main/Install.ps1').Content) } -confirm_uninstall_ms_spoti -confirm_spoti_recomended_over -cache_off -block_update_on -start_spoti"
+    #Install spicetify
+    Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/install.ps1" | Invoke-Expression
+    #Configure spicetify
+    spicetify config color_scheme Purple
+    spicetify apply
+}
+
 function ALL {
     Apps
     VSCode
     WSL
     Hardening
+    Spotify
 }
 
 function Show-Menu {
@@ -39,7 +50,8 @@ function Show-Menu {
     Write-Host "2: WSL Setup"
     Write-Host "3: Hardening"
     Write-Host "4: Deafult Apps"
-    Write-Host "5. ALL"
+    Write-Host "5: Spotify Setup"
+    Write-Host "6. ALL"
     Write-Host "q: Quit"
 
 }
@@ -56,7 +68,8 @@ do {
         '2' { WSL }
         '3' { Hardening }
         '4' { Apps }
-        '5' { ALL }
+        '5' { Spotify }
+        '6' { ALL }
     }
     pause
 }
