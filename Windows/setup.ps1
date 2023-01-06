@@ -18,6 +18,8 @@ function Hardening {
 function Apps {
     winget install Git.Git
     winget install python
+    winget install VisualStudioCode
+    winget install VideoLAN.VLC
     choco install mpv -y
 }
 
